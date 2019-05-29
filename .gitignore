@@ -17,8 +17,7 @@ g/build/
 .idea
 .DS_Store
 fixtures.sh
-/web/app.php
-/web/app_dev.php
+/docker
 /bin/cronUpdateCommandDev.sh
 /bin/cronUpdateCommandProd.sh
 /app/bootstrap.php.cache
