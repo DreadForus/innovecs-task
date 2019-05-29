@@ -1,0 +1,7 @@
+hazardous:
+    path:     /neo/hazardous
+    defaults: { _controller: AppBundle:Neo:hazardous }
+
+fastest:
+    path:     /neo/fastest
+    defaults: { _controller: AppBundle:Neo:fastest }

@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+    task_php:
+        build: docker/php7-fpm
+        container_name: task_php
+        external_links:
+          - task_mysql
+        volumes:
+            - .:/var/www/symfony
+        networks:
+          - network_task
+
+    task_nginx:
+        build: docker/nginx
+        restart: always
+        container_name: task_nginx
+        ports:
+            - 80:80
+        volumes_from:
+            - task_php
+        networks:
+          - network_task
+
+    task_mysql:
+        build:
+          context: docker/mysql
+          dockerfile: Dockerfile
+        image: task_mysql
+        hostname: task_mysql
+        container_name: task_mysql
+        restart: always
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./docker/mysql/data:/var/lib/mysql
+        networks:
+          - network_task
+networks:
+  network_task:
+
+#docker exec -i -t task_php bash
+#php -d memory_limit=3000M /usr/local/bin/composer install

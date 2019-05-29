@@ -1,0 +1,19 @@
+parameters:
+    locale: en
+
+    database_host: task_mysql
+    database_port: 3306
+    database_name: test_dbb
+    database_user: root
+    database_password: root
+
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: ~
+    mailer_password: ~
+
+    api_key: N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
+    api_path: https://api.nasa.gov/neo/rest/v1/feed
+
+    # A secret key that's used to generate certain security-related tokens
+    secret: ThisTokenIsVerYSeCRetUIGUKIGUKGHUfvc

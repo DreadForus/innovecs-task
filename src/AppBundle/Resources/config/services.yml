@@ -1,0 +1,20 @@
+services:
+    near_earth_object_service:
+      class: AppBundle\Service\NearEarthObjectService
+      arguments: ["@doctrine.orm.default_entity_manager"]
+
+    near_earth_object_loader_service:
+      class: AppBundle\Service\NearEarthObjectLoader
+      arguments: ["@doctrine.orm.default_entity_manager", "%api_key%", "%api_path%"]
+
+    near_earth_object_list_pagination_service:
+      class: AppBundle\Service\Pagination\EntityList\NerEarthObjectPaginationService
+      arguments: ["@near_earth_object_service", "@doctrine.orm.default_entity_manager"]
+
+    near_earth_object_hazardous_list_pagination_service:
+      class: AppBundle\Service\Pagination\EntityList\NerEarthObjectHazardousPaginationService
+      arguments: ["@near_earth_object_service", "@doctrine.orm.default_entity_manager"]
+
+    near_earth_object_fastest_list_pagination_service:
+      class: AppBundle\Service\Pagination\EntityList\NerEarthObjectFastestPaginationService
+      arguments: ["@near_earth_object_service", "@doctrine.orm.default_entity_manager"]

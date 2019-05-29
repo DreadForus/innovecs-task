@@ -1,5 +1,4 @@
 g/build/
-/phpunit.xml
 !/var/cache
 /var/cache/*
 !var/cache/.gitkeep
@@ -13,14 +12,10 @@ g/build/
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/web/uploads/
 .idea
 .DS_Store
 fixtures.sh
 /docker
-/bin/cronUpdateCommandDev.sh
-/bin/cronUpdateCommandProd.sh
-/app/bootstrap.php.cache
 /var/bootstrap.php.cache
 /var/logs/phpunit
 #dev scripts
