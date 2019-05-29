@@ -1,1 +1,3 @@
-# innovecs-task
+Start Application
+
+sh start_app.sh
