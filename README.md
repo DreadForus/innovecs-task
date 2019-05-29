@@ -10,3 +10,7 @@ Write into hosts file
 Routes 
 http://task.docker/neo/hazardous
 http://task.docker/neo/fastest
+
+Valid Commands
+
+/var/www/symfony/bin/console app:load
